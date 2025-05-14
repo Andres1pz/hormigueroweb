@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <style>
+    .headweb {
+      display: flex;
+      width: 100%;
+      height: 600px;
+      transition: 400ms;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://png.pngtree.com/background/20221111/original/pngtree-nobody-interface-of-pixel-game-platform-picture-image_1961347.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+	  cursor: none;
+    }
+
+    .logo img {
+      width: 1200px; 
+      height: auto;
+    }
+	.boxes {
+		display: flex;
+		justify-content: center;
+		padding: 50px;
+		margin: 0%;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		height: auto;
+		background-color: rgba(21, 21, 21, 0.197);
+		transition: 300ms;
+		z-index: 2;
+	}
+	.box {
+		display: flex;
+		width: 460px;
+		height: auto;
+		background-color: white;
+		border-radius: 20px;
+		padding: 20px;
+		margin: 20px;
+		justify-content: center;
+		flex-direction: column;
+		align-items: baseline;
+		transition: 300ms;
+	}
+	.tlUno{
+		font-size: 25px;
+		font-weight: 900;
+		margin: 0%;
+	}
+	.desctxt {
+		font-size: 20px;
+		margin: 7px;
+	}
+	.box.box:hover{
+		transition: 300ms;
+		box-shadow: 0px 0px 5px 1px white;
+	}
+
+	.cajas {
+		background-color: rgb(13, 13, 13);
+		height: 200px;
+		margin: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.tlDos{
+		font-size: 55px;
+		margin: 0%;
+		color: white;
+	}
+	#countdown {
+		font-size: 55px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-weight: 500;
+		color: white;
+	}
+	.links {
+		background-color: white;
+		height: auto;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: row;
+	}
+	.cajaLink {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		background-color: rgb(115, 0, 0);
+		color: white;
+		width: 400px;
+		height: 100px;
+		text-decoration: none;
+		margin: 20px;
+	}
+	.TlLink {
+		font-weight: 300;
+		font-size: 40px;
+	}
+	@media (max-width: 1250px) {
+		.logo img {
+      		width: 700px; 
+      		height: auto;
+			max-width: 900px;
+    	}
+		.headweb {
+			height: 300px;
+			transition: 300ms;
+		}
+		.tlUno{
+			font-size: 15px;
+			font-weight: 900;
+			margin: 0%;
+		}
+		.desctxt {
+			font-size: 15px;
+			margin: 7px;
+		}
+		.box {
+			display: flex;
+			width: 500px;
+			height: auto;
+			background-color: white;
+			border-radius: 20px;
+			padding: 20px;
+			margin: 5px;
+			transition: 300ms;
+		}
+		#countdown {
+		font-size: 25px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-weight: 500;
+		color: white;
+		}
+		.links {
+			background-color: white;
+			height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cajaLink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 20px;
+			background-color: rgb(115, 0, 0);
+			color: white;
+			width: auto;
+			height: 50px;
+			padding: 10px;
+			margin: 20px;
+			text-decoration: none;
+		}
+		.TlLink {
+			font-weight: 300;
+			font-size: 25px;
+		}
+		@media (max-width: 876px) {
+			.tlUno{
+				font-size: 25px;
+				font-weight: 900;
+				margin: 0%;
+			}
+			.desctxt {
+				font-size: 20px;
+				margin: 7px;
+			}
+			.boxes {
+				display: flex;
+				justify-content: center;
+				padding: 50px;
+				margin: 0%;
+				flex-direction: row;
+				flex-wrap: wrap;
+				height: auto;
+				background-color: rgb(21, 21, 21);
+				transition: 300ms;
+			}
+			.box {
+				height: auto;
+				margin: 10px;
+			}
+			.logo img {
+      			width: 600px; 
+      			height: auto;
+				max-width: 900px;
+    		}
+			.headweb {
+				height: 1000px;
+			}
+			#countdown {
+				font-size: 20px;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				font-weight: 500;
+				color: white;
+			}
+			.tlDos{
+				font-size: 40px;
+				margin: 0%;
+				color: white;
+			}
+			.links {
+				background-color: white;
+				height: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.cajaLink {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 20px;
+				background-color: rgb(115, 0, 0);
+				color: white;
+				width: auto;
+				height: auto;
+				padding: 10px;
+				margin: 20px;
+				text-decoration: none;
+			}
+			.TlLink {
+				font-weight: 300;
+				font-size: 20px;
+			}
+	}
+	@media (max-width: 500px){
+		.logo img {
+      			width: 400px; 
+      			height: auto;
+				max-width: 900px;
+    		}
+		.links {
+			flex-direction: column;
+			height: 400px;
+		}
+		.cajaLink {
+			width: 300px;
+		}
+	}
+
+}
+  </style>
+  <main>
+    <div class="headweb">
+      <div class="logo">
+        <img src="/public/1.png" alt="Logo Hormiguero" />
+      </div>
+    </div>
+  </main>
+<section>
+	<div class="boxes">
+		<div class="box">
+				<h1 class="tlUno">¿Qué es el Hormiguero?</h1>
+				<p class="desctxt">
+					El hormiguero es un evento realizado por Andrés López, conocido en redes sociales como Andres1pz.
+				</p>
+				<p class="desctxt">
+					Es un evento que se transmitirá por YouTube únicamente con capacidad de 100 jugadores
+					en simultáneo. Este evento no es únicamente para creadores de contenido, el creador busca hacer
+					eventos en los que todos puedan participar.
+				</p>
+		</div>
+		<div class="box">
+			<h1 class="tlUno">
+				¿Cuál es la modalidad?
+			</h1>
+			<p class="desctxt">
+				El evento consta de una modalidad battle royale en la cuál se hará pelear a jugadores en una caja
+				recursos que les ayudará a la supervivencia. El que quede en primer lugar será el ganador.				
+			</p>
+			<p class="desctxt">
+				Para participar no es necesario ser Pro Player. Solo se debe conocer lo básico del
+				videojuego para defenderse y atacar de forma efectiva.
+			</p>
+		</div>
+		<div class="box">
+			<h1 class="tlUno">Requisitos</h1>
+			<li class="desctxt">Tener el juego con uso de servidores válido.</li>
+			<li class="desctxt">Tener Conexión estable para evitar problemas.</li>
+			<li class="desctxt">Tener una cuenta de Discord y estár en el servidor.</li>
+			<li class="desctxt">Tener las ultimas versiones de la 1.21 en adelante.</li>
+		</div>
+	</div>
+</section>
+<section> <!-- Sección Reactiva de Fechas -->
+	<div class="cajas">
+		<h1 class="tlDos">Quedan</h1>
+		<div class="boxReact">
+			<div id="countdown"></div>
+		</div>
+	</div>
+</section>
+<section> <!-- Links -->
+	<div class="links">
+  		<a href="https://www.youtube.com/@Andress1pz/streams" class="cajaLink">
+    		<h1 class="TlLink">Directo de YouTube</h1>
+  		</a>
+  		<a href="https://discord.com/invite/DaYRCATPAj" class="cajaLink">
+    		<h1 class="TlLink">Discord Evento</h1>
+  		</a>
+  		<a href="https://www.instagram.com/andres1pz/" class="cajaLink">
+    		<h1 class="TlLink">Instagram</h1>
+  		</a>
+	</div>
+  </section>
+</Layout>
